@@ -4,10 +4,10 @@ import java.util.Scanner;
 public class Calculadora {
 
 	public static void main(String[] args) {
-		Scanner scan=new Scanner(System.in);//para receber dados do usuário.
+		Scanner scan=new Scanner(System.in);//para receber dados do usuÃ¡rio.
 
 		double a,b;
-		System.out.println("Bem vindo a Calculadora, por favor,insira dois números reais!");
+		System.out.println("Bem vindo a Calculadora, por favor,insira dois nÃºmeros reais!");
 		System.out.println("Digite o primeiro valor:");
 		a=scan.nextDouble();
 		System.out.println("Digite o segundo valor: ");
@@ -25,8 +25,9 @@ public class Calculadora {
 		
 		
 	}
-	/*Optei por usar double em vez de int porque assim o usuário poderia efetuar 
-	 * operações com números reais 
+	/*Optei por usar double em vez de int porque assim o usuÃ¡rio poderia efetuar 
+	 * operaÃ§Ãµes com nÃºmeros reais.
+	 Criei os mÃ©todos abaixo.
 	 */
 public static double soma(double a,double b) {
 	return a+b;
