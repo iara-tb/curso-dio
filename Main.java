@@ -1,36 +1,44 @@
-import java.time.LocalDateTime;
+/*teste */
+import java.util.*;   
+import java.util.Arrays;
+import java.lang.*;
+// create class to split string by blanck space   
+public class Main {   
+      
+    // main() method start   
+    public static void main(String[] args) {
+          
+        String str1, str2;   
+          
+        // create Scanner class object to take input from user   
+        Scanner sc = new Scanner(System.in);   
+          
+        // take input from the user for str1 and str2   
+        System.out.println("Digite c√≥digo,quantidade e valor da pe√ßa 1 serparados por espa√ßo: ");   
+        str1 = sc.nextLine();   
+          
+        System.out.println("Digite c√≥digo,quantidade e valor da pe√ßa 2 serparados por espa√ßo: ");   
+        str2 = sc.nextLine();   
+          
+        // use split(regex) and split(regex, limit) methods    
+        String[] str1Array = str1.split(" ");   
+          
+        String[] str2Array = str2.split(" ");   
+         
+        // in this part I converted the data from the arrays in Integer and float types
+        int cod1 = Integer.parseInt(str1Array[0]);
+        int quantidade1=Integer.parseInt(str1Array[1]);
+        float valor1=Float.parseFloat(str1Array[2]);
+        float total1=(quantidade1*valor1);
+        int cod2 = Integer.parseInt(str2Array[0]);
+        int quantidade2=Integer.parseInt(str2Array[1]);
+        float valor2=Float.parseFloat(str2Array[2]);
+        float total2=(quantidade2*valor2);
+        
+        
+        float custo =(total1+total2);
+        System.out.printf("VALOR A PAGAR: R$ %.2f ",custo);
+       
+        }
 
-import dominio.Curso;
-import dominio.Mentoria;
-
-public class Main {
-
-	public static void main(String[] args) {
-		// Desafio Code Girls- DIO /F1RST Santander
-	
-		Curso curso1 = new Curso();
-		curso1.setTitulo("Curso Java");
-		curso1.setDescricao("descriÁ„o curso java");
-		curso1.setCargaHoraria(50);
-		
-		Mentoria mentoria = new Mentoria();
-		mentoria.setTitulo("Mentoria");
-		mentoria.setDescricao("DescriÁ„o mentoria java");
-		mentoria.setDate(LocalDateTime.now());
-		
-		
-		//SÛ temos acesso aos atributos de Curso e Mentoria com getters and setters.
-		
-		Curso curso2 = new Curso();
-		curso1.setTitulo("Curso js");
-		curso1.setDescricao("descriÁ„o curso js");
-		curso1.setCargaHoraria(8);
-		
-		System.out.println(curso1);
-		System.out.println(curso2);
-		System.out.println(mentoria);
-		
-
-	}
-
-}
+  }
